@@ -100,10 +100,16 @@ function adjacentElementsProduct(inputArray) {
     console.log(multiples);
   }
 
+    // multiples.slice(NaN)
+    // console.log(multiples);
 // other ways -- slice off the NaN
 // think of ways to get rid of the NaN
 
+// Hint
 
+// function adjacentElementsProduct(???) {
+//     return Math.???(...arr.slice(?).map((x,?)=>[x*arr[?]]))
+//   }
   
 
   let wholeNumber = multiples.filter( checkNum );
@@ -113,8 +119,12 @@ function adjacentElementsProduct(inputArray) {
   var max = Math.max(...wholeNumber);
   if ( max === 0 ){
       return 0;
-  } else {
+  }else if ( max > 0 ) {
       return max;
+  } else if ( max < 0 ){
+      return max;
+  } else {
+      return 0;
   }
 
   // for ( let i = 0; i < multiples.length; i++){
@@ -127,14 +137,11 @@ function adjacentElementsProduct(inputArray) {
   //     }
   // }
 }
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
-console.log(adjacentElementsProduct([5, 1, 2, 3, 1, 4]));
+
+// console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+// console.log(adjacentElementsProduct([5, 1, 2, 3, 1, 4]));
+console.log(adjacentElementsProduct([-23, 4, -3, 8, -12]));
 console.log(adjacentElementsProduct([1, 0, 1, 0, 1000]));
 
 // console.log('the answer should be: 18, -12, 10, -35, 21')
 
-// Hint
-
-// function adjacentElementsProduct(???) {
-//     return Math.???(...arr.slice(?).map((x,?)=>[x*arr[?]]))
-//   }
