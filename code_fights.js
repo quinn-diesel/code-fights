@@ -81,12 +81,10 @@ function adjacentElementsProduct(inputArray) {
   // now evaluating all the pairs
   for (let index = 0; index < inputArray.length; index++) {
     const element = inputArray[index] * inputArray[index + 1];
-    // console.log('-----------')
-    // console.log(element);
-    // multiples[index] = element
-
 
     function checkNum(element) {
+       
+
         if ( isNaN(element) === true ) {
             return element = 0;
         } else if (element >= 0 ){
@@ -97,7 +95,7 @@ function adjacentElementsProduct(inputArray) {
       }
 
     multiples.push(element);
-    console.log(multiples);
+    // console.log(multiples);
   }
 
     // multiples.slice(NaN)
@@ -113,35 +111,30 @@ function adjacentElementsProduct(inputArray) {
   
 
   let wholeNumber = multiples.filter( checkNum );
+  var index = multiples.indexOf(NaN);
 
-//   console.log(wholeNumber);
-//   console.log(Math.max(...wholeNumber));
+  if ( index === -1){
+      multiples.splice(index, 1);
+  }
+  console.log(multiples);
+
   var max = Math.max(...wholeNumber);
-  if ( max === 0 ){
+  if ( max === -Infinity ){
       return 0;
+    // console.log('max === infinity');
   }else if ( max > 0 ) {
       return max;
   } else if ( max < 0 ){
       return max;
   } else {
-      return 0;
+      console.log( 'else');
+    //   return (1 / max) ;
   }
 
-  // for ( let i = 0; i < multiples.length; i++){
-  //     if (i > i++){
-  //         console.log(i);
-  //         console.log(multiples[i]);
-  //     } else {
-  //         console.log(i++);
-  //         console.log(multiples[i]);
-  //     }
-  // }
 }
 
-// console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
-// console.log(adjacentElementsProduct([5, 1, 2, 3, 1, 4]));
+
 console.log(adjacentElementsProduct([-23, 4, -3, 8, -12]));
 console.log(adjacentElementsProduct([1, 0, 1, 0, 1000]));
 
-// console.log('the answer should be: 18, -12, 10, -35, 21')
 
