@@ -19,37 +19,93 @@
 // count the length of the new array
 // return that length
 
-function compareNumbers (a,b){
-    return a - b;
-}
+// what I missed - getting the min and max for the array
 
 
+function makeArrayConsecutive2 (statues){
 
-var orderArr = [];
+    // sor the array coming in 
+    statues.sort((a, b)=> {
+        return a-b;
+     });
 
-// ----- SORTING THE ARRAY ----- //
-function makeArrayConsecutive2(statues) {
+    // return statues;
+
+    // find the minimum and the maximum
+    var min = statues[0];
+     console.log('min =' + min)
+
+    var max = statues[statues.length -1];
+
+    console.log('max = ' + max)
+
+    var count = 0;
+
     
-    const order = statues.sort(compareNumbers);
+    
+    // loop through the results add the count
+    for ( var i = min; i < max; i++){
+        if(statues.indexOf(i) === -1){
+            console.log(statues.indexOf(i));
+            count++;
+        }
+    }
 
-    orderArr.push.order;
-    // console.log(order);
-    // return order;
-}
+    return count;
 
-console.log(orderArr);
+};
 
-// ----- EVALUATE EACH ELEMENT OF THE ARRAY ----- //
 
-var eval = [];
 
-for (let index = 0; index < makeArrayConsecutive2.length; index++) {
+// ----- ANSWERS ----- //
 
-    eval.push(makeArrayConsecutive2[index + 1] - makeArrayConsecutive2[index] );
+console.log(makeArrayConsecutive2([6, 2, 3, 8]));
+// return 3
 
-}
+console.log(makeArrayConsecutive2([0, 3]));
+// // return 2
 
-console.log(eval);
+console.log(makeArrayConsecutive2([5, 4, 6]));
+// // return 0
+
+console.log(makeArrayConsecutive2([6, 3]));
+// // return 2
+
+console.log(makeArrayConsecutive2([1]));
+// // return 0
+
+// console.log('missing' + missing());
+
+
+// function compareNumbers (a,b){
+//     return a - b;
+// }
+
+// var orderArr = [];
+
+// // ----- SORTING THE ARRAY ----- //
+// function makeArrayConsecutive2(statues) {
+    
+//     const order = statues.sort(compareNumbers);
+
+//     orderArr.push.order;
+//     // console.log(order);
+//     // return order;
+// }
+
+// console.log(orderArr);
+
+// // ----- EVALUATE EACH ELEMENT OF THE ARRAY ----- //
+
+// var eval = [];
+
+// for (let index = 0; index < makeArrayConsecutive2.length; index++) {
+
+//     eval.push(makeArrayConsecutive2[index + 1] - makeArrayConsecutive2[index] );
+
+// }
+
+// console.log(eval);
 
 
 
@@ -68,21 +124,3 @@ console.log(eval);
 // }
 
 
-// ----- ANSWERS ----- //
-
-makeArrayConsecutive2([6, 2, 3, 8]);
-// return 3
-
-// makeArrayConsecutive2([0, 3]);
-// // return 2
-
-// makeArrayConsecutive2([5, 4, 6]);
-// // return 0
-
-// makeArrayConsecutive2([6, 3]);
-// // return 2
-
-// makeArrayConsecutive2([1])
-// // return 0
-
-// console.log('missing' + missing());
