@@ -1,4 +1,7 @@
-//
+// ----- CHECK CENTURY FROM YEAR ----- //
+
+
+
 // // console.log('working');
 
 // function centuryFromYear(year) {
@@ -19,6 +22,20 @@
 // }
 
 // console.log(centuryFromYear(1900));
+
+// ----- CHECK PALINDROME ----- //
+
+// Given the string, check if it is a palindrome.
+
+// Example
+
+// For inputString = "aabaa", the output should be
+// checkPalindrome(inputString) = true;
+// For inputString = "abac", the output should be
+// checkPalindrome(inputString) = false;
+// For inputString = "a", the output should be
+// checkPalindrome(inputString) = true.
+
 
 // function checkPalindrome(inputString) {
 
@@ -98,17 +115,6 @@ function adjacentElementsProduct(inputArray) {
     // console.log(multiples);
   }
 
-    // multiples.slice(NaN)
-    // console.log(multiples);
-// other ways -- slice off the NaN
-// think of ways to get rid of the NaN
-
-// Hint
-
-// function adjacentElementsProduct(???) {
-//     return Math.???(...arr.slice(?).map((x,?)=>[x*arr[?]]))
-//   }
-  
 
   let wholeNumber = multiples.filter( checkNum );
   var index = multiples.indexOf(NaN);
