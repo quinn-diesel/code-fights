@@ -41,20 +41,41 @@
 // add the total of the arrays up
 // total
 
-console.log('linked');
+// answer 
 
-function matrixElementsSum(matrix) {
+// b =  array.slice().map( function(row){ return row.slice(); });
 
-    let arrOne = []
+// console.log('linked');
+
+// function matrixElementsSum(matrix) {
+
+//     matrix.slice().map(
+//         function(row){
+//             console.log( row.slice());
+//             // return row.slice();
+//         }
+//     )
+// }
+
+function matrixElementsSum(matrix){
+    let priceTotal = 0;
     
-    for ( i = 0; i > matrix.length; i++){
-        for (let j = 0; j < array.length; j++) {
-            // const element = arrOne.push(arr(j));
-            console.log(element);
-        }
-    }
+    let bannedIndex = [];
 
-    console.log(arrOne);
+    for ( let i = 0; i < matrix.length; i++){
+        // console.log('matrix.length: ' + matrix.length)
+        for(let j = 0; j < matrix[i].length; j++){
+            // console.log('matrix.length[i][j]: ' + matrix[i][j])
+            if(matrix[i][j] === 0 ){
+                // console.log('bannedIndex: ' + bannedIndex)
+                bannedIndex.push(j);
+            } else if ( bannedIndex.indexOf(j) === -1){
+                // console.log( 'bannedIndex.indexOf: ' + bannedIndex.indexOf(j))
+                priceTotal += matrix[i][j];
+            }
+        }
+        console.log(priceTotal);
+    }
 }
 
 // for (let index = 0; 
