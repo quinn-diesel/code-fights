@@ -74,8 +74,9 @@ function matrixElementsSum(matrix){
                 priceTotal += matrix[i][j];
             }
         }
-        console.log(priceTotal);
     }
+    console.log(priceTotal);
+    return priceTotal;
 }
 
 // for (let index = 0; 
