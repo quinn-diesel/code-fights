@@ -16,27 +16,49 @@ console.log('linked');
 
 function allLongestStrings(inputArray) {
 
-    let longest = [];
+    let longestWords = [];
 
-    for(i = 0; i < inputArray.length; i++ ){
+    for(i = 1; i < inputArray.length; i++ ){
+
         const stringOne =  inputArray[i].split(" ").join("");
-        const stringTwo =  inputArray[i+1].split(" ").join("");
-
-        if (stringOne.length <= stringTwo.length){
-           return longest.push(stringOne)
+        const stringTwo =  inputArray[i-1].split(" ").join("");
+        
+        if( i === (inputArray.length)) {
+            console.log('return last');
+            // return;
+        } else if (stringTwo.length >= stringOne.length ){
+            let push = longestWords.push(stringTwo)
+           console.log(longestWords)
+        } else {
+            longestWords.push(stringOne)
         }
-        // console.log(stringOne.length)
-        // console.log(stringTwo.length)
-
     }
     // console.log(longest)
+    return longestWords
 }
 
+// -- ANSWER -->
 
+// function allLongestStrings(inputArray){
+//     let longestLength = inputArray[0].length;
+
+//     for (i = 1; i < inputArray.length; i++){
+//         if (longestLength < inputArray[i].length) {
+//             longestlength = inputArray[i].length;
+//         }
+//     }
+    
+//     inputArray = inputArray.filter((element) => {
+//         return element.length === longestLength;
+//     });
+
+//     return inputArray;
+
+// }
 
 console.log(allLongestStrings(["aba", "aa", "ad", "vcd","aba"]))
 
-//  console.log(allLongestStrings("aa"]));
+ console.log(allLongestStrings(["aa"]));
 
 //  console.log(allLongestStrings(["abc", "eeee", "abcd", "dcd"]));
 
