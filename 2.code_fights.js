@@ -23,6 +23,10 @@
 
 // console.log(centuryFromYear(1900));
 
+
+// -- TOP ANSWER -->
+
+
 // ----- CHECK PALINDROME ----- //
 
 // Given the string, check if it is a palindrome.
@@ -60,6 +64,10 @@
 // create array of the multiples
 // compare the numbers in that array
 //
+
+// -- TOP ANSWER --> 
+// 
+
 
 // ----- ADAJCENT ELEMENTS PRODUCT ----- //
 
@@ -142,5 +150,16 @@ function adjacentElementsProduct(inputArray) {
 
 console.log(adjacentElementsProduct([-23, 4, -3, 8, -12]));
 console.log(adjacentElementsProduct([1, 0, 1, 0, 1000]));
+
+// -- TOP ANSEWR --> 
+ function adjacentElementsProduct(inputArray) {
+    var prod = inputArray[0] * inputArray[1];
+    
+    for (var i = 1; i<inputArray.length - 1;i++) {
+        prod = Math.max(prod, inputArray[i] * inputArray[i+1]);
+    }
+    
+    return prod
+}
 
 

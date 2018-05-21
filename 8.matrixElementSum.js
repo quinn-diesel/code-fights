@@ -79,6 +79,8 @@ function matrixElementsSum(matrix){
     return priceTotal;
 }
 
+// key for understanding remmember the indexOf is going to check if another index is in the banned area. this will return 0.
+
 // for (let index = 0; 
 //     index < array.length; index++) {
 //     const element = array[index];

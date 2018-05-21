@@ -51,6 +51,7 @@ function almostIncreasingSequence(sequence) {
     }
 
     console.log(counter);
+    // remembe if this is correct it will return true
     return counter <= 1;
 
 }
