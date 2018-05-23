@@ -94,24 +94,34 @@ function allLongestStrings(inputArray){
     console.log(max);
     // console.log(longestWords);
 
-    // finding all the occurences of the max
-    let idx = wordLength.indexOf(max);
-
-    while (idx != -1){
-        longestPlace.push(idx);
-        idx = wordLength.indexOf(max, idx+1);
-        longestWord.push(idx(inputArray));
+    for (j = 0; j< inputArray.length; j++){
+        if (inputArray[j].length === max){
+            longestWord.push(inputArray[j])
+        }
+        // console.log(longestWord);
     }
-    // array of where the max lengths are
-    console.log(longestPlace);
+    return longestWord;
+
+
+    // // finding all the occurences of the max
+    // let idx = wordLength.indexOf(max);
+
+    // while (idx != -1){
+    //     longestPlace.push(idx);
+    //     idx = wordLength.indexOf(max, idx+1);
+    //     // longestWord.push(idx(inputArray));
+    // }
+    // // array of where the max lengths are
+    // console.log(longestPlace);
+    // 
 }
 
 
-// console.log(allLongestStrings(["aba", "aa", "ad", "vcd","aba"]));
+console.log(allLongestStrings(["aba", "aa", "ad", "vcd","aba"]));
 
-//  console.log(allLongestStrings(["aa"]));
+ console.log(allLongestStrings(["aa"]));
 
  console.log(allLongestStrings(["abc", "eeee", "abcd", "dcd"]));
 
-//  console.log(allLongestStrings(["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"]));
+ console.log(allLongestStrings(["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"]));
 
