@@ -125,3 +125,34 @@ console.log(allLongestStrings(["aba", "aa", "ad", "vcd","aba"]));
 
  console.log(allLongestStrings(["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"]));
 
+// ---- TOP ANSWERS ---- //
+
+// function allLongestStrings(inputArray) {
+//     'use strict';
+//     let maxSize = Math.max(...inputArray.map(x => x.length));
+//     return inputArray.filter(x => x.length === maxSize);
+// }
+
+
+
+// function allLongestStrings(inputArray) {
+//     var result = [], len = 0;
+//     for (var i=0; i<inputArray.length; i++) {
+//         if (inputArray[i].length > len) {            
+//             result.length = 0;
+//             result.push(inputArray[i]);
+//             len = inputArray[i].length;
+//         }
+//         else if (inputArray[i].length == len) { 
+//             result.push(inputArray[i]);
+//         }
+//     }
+//     return result;
+// }
+
+
+
+// function allLongestStrings(inputArray) {
+//     var max = Math.max(...inputArray.map(function(i){ return i.length}));
+//     return inputArray.filter(function(i){ return i.length === max});
+// }

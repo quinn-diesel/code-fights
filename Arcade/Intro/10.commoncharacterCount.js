@@ -57,3 +57,40 @@ console.log(commonCharacterCount( "zzzz", "zzzzzzz"));
 
 // // answer: 1
 // console.log(commonCharacterCount("a", "aaa"));
+
+
+
+// ----- TOP ANSWERS ----- //
+
+// function commonCharacterCount(s1, s2) {
+//     for (var i = 0; i < s1.length; i++) {
+//         s2 = s2.replace(s1[i], "!");
+//     }
+//     return s2.replace(/[^!]/g, "").length;
+// }
+
+
+// function commonCharacterCount(s1, s2) {
+//     var a=s1.split(""),r=0
+//     while (a.length){
+//       var t=a.pop()
+//       if(s2.includes(t)){
+//         r++
+//         s2=s2.replace(t,"")
+//       }
+//     }
+//     return r
+//   }
+
+
+// function commonCharacterCount(s1, s2) {
+//     var len = s1.length;
+//     var count = 0;
+//     for(var i= 0; i<len; i++) {
+//         if(s2.search(s1[i]) !=-1) {
+//             s2 = s2.replace(s1[i], "");
+//             count++;
+//         }
+//     }
+//     return count;
+// }

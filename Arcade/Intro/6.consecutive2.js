@@ -124,3 +124,33 @@ console.log(makeArrayConsecutive2([1]));
 // }
 
 
+// ----- TOP ANSWERS ----- //
+
+// function makeArrayConsecutive2(sequence) {
+//     return Math.max(...sequence)-Math.min(...sequence)+1-sequence.length
+//   }
+  
+
+
+//   function makeArrayConsecutive2(statues) {
+//     return Math.max.apply(null, statues) - Math.min.apply(null, statues) - statues.length + 1;
+// }
+
+
+// function makeArrayConsecutive2(statues) {
+//     function sort(a, b) {
+//             if (a < b) return -1;
+//             if (a > b) return 1;
+//     }
+//     statues.sort(sort);
+//     var statueI = 0;
+    
+//     for (var i = 1; i < statues.length; i++) {
+//             var a = statues[i];
+//             var b = statues[i - 1];
+//             if (b + 1 !== a) {
+//                     statueI += a - b - 1;
+//             }
+//     }
+//     return statueI;
+// }
