@@ -26,6 +26,11 @@
 
 // -- TOP ANSWER -->
 
+// function centuryFromYear(year) {
+//     return Math.ceil(year / 100)
+}
+
+
 
 // ----- CHECK PALINDROME ----- //
 
@@ -65,8 +70,16 @@
 // compare the numbers in that array
 //
 
-// -- TOP ANSWER --> 
-// 
+// -- TOP ANSWER -->
+
+// function checkPalindrome(inputString) {
+//     return inputString == inputString.split('').reverse().join('');
+// }
+
+// function checkPalindrome(inputString) {
+//     return [...inputString].reverse().join('') === inputString
+// }
+
 
 
 // ----- ADAJCENT ELEMENTS PRODUCT ----- //
@@ -163,3 +176,31 @@ console.log(adjacentElementsProduct([1, 0, 1, 0, 1000]));
 }
 
 
+// ---- TOP ANSWERS ----- //
+
+// function adjacentElementsProduct(arr) {
+//     return Math.max(...arr.slice(1).map((x,i)=>[x*arr[i]]))
+//   }
+
+
+// function adjacentElementsProduct(inputArray) {
+//     var prod = inputArray[0] * inputArray[1];
+    
+//     for (var i = 1; i<inputArray.length - 1;i++) {
+//         prod = Math.max(prod, inputArray[i] * inputArray[i+1]);
+//     }
+    
+//     return prod
+// }
+
+
+// function adjacentElementsProduct(inputArray) {
+//     var largestSoFar = inputArray[0] * inputArray[1];
+//     for (var i = 1; i < inputArray.length; i++) {
+//         if (inputArray[i] * inputArray[i+1] > largestSoFar) {
+//             largestSoFar = inputArray[i] * inputArray[i+1];
+//         }
+//     }
+//     return largestSoFar;
+    
+// }
