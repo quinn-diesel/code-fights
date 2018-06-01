@@ -5,7 +5,33 @@
 // For a = [-1, 150, 190, 170, -1, -1, 160, 180], the output should be
 // sortByHeight(a) = [-1, 150, 160, 170, -1, -1, 180, 190].
 
+// console.log('linked sort');
+
+// PSEUDO
+// assess each element in the array by themselves
+// log out an array of the indices each -1
+// remove all the -1ns
+// sort the remaining array
+// push -1ns back into the arrays
+
 function sortByHeight(a) {
+    // const constSort = a.sort();
+    // let letSort = a.sort();
+    
+    // console.log(constSort);
+    // console.log(letSort);
+    
+    // console.log(...a)
+
+    
+    for (i = 0; i< a.length; i++){
+        const index = a.indexOf(-1, 0);
+        console.log(index);
+        
+        if(i === -1){
+            console.log(a.splice(index));
+        }
+    }
 
 }
 
@@ -15,7 +41,7 @@ function sortByHeight(a) {
 
 // Test 1
 // Input:
-// a: [-1, 150, 190, 170, -1, -1, 160, 180]
+console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
 // Expected Output:
 // [-1, 150, 160, 170, -1, -1, 180, 190]
 
