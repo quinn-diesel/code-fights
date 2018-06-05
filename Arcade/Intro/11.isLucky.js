@@ -11,11 +11,47 @@
 
 // ----- ANSWER -----
 
+// PSEUDO 
+// convert to array 
+
+function isLucky(n) {
+    
+    // half n length
+    const string = n.toString();
+    const length = string.length;
+    const half = (length / 2);
+
+    const arr = n.toString().split('');
+
+    for(i = 0; i < half; i++){
+       let firstHalf =  i + (i + 1);
+        console.log('firstHalf: ' + firstHalf);
+        return firstHalf;
+    }
+
+    console.log('half: ' = half);
+
+    for(i = half; i < length; i++){
+        let secondHalf = i + (i + 1);
+        console.log('secondHalf: ' + secondHalf);
+        return 
+    }
+
+    if(firstHalf === lastHalf){
+        return true;
+    } else {
+        return false;
+    }
+    // console.log(arr);
+    // console.log(half);
+}
+
 
 
 
 // ---- TESTS ----- 
 
+console.log(isLucky(1230));
 
 // Test 1
 // Input:
