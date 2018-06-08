@@ -27,6 +27,7 @@
 // Return true if it is possible to remove one element from the array in order to get a strictly increasing sequence, otherwise return false.
 
 
+
 // PSEUDO DO
 // create assessment product of  sequence[0] to sequence[1]
 // for loop to go through 
