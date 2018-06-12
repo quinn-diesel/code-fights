@@ -7,25 +7,77 @@
 // For a = [50, 60, 60, 45, 70], the output should be
 // alternatingSums(a) = [180, 105].
 
-function alternatingSums(a) {
+// console.log('linked');
 
+// function alternatingSums(a) {
+//     // console.log(a)
+    
+//     let teamOne = 0;
+//     let teamTwo = 0;
+
+//     for(i = 0; i< a.length; i++){
+//         if(i % 2 === 0){
+//             teamOne += a[i];
+//         } else {
+//             teamTwo += a[i];
+//             // console.log('odd');
+//         }
+//     }
+//     console.log('1: ' + teamOne);
+//     console.log('2: ' + teamTwo);
+//     const arr = [teamOne, teamTwo];
+//     return arr;
+//     console.log(arr);
+// }
+
+// refactor
+
+function alternatingSums(a){
+    let teamOne = 0;
+    let teamTwo = 0;
+
+    for(i = 0; i < a.length; i++){
+        (i % 2 === 0 ) ? teamOne += a[i] : teamTwo += a[i];
+    }
+    return [teamOne, teamTwo];
+    console.log([teamOne, teamTwo]);
 }
+
+
+// ----- TOP ANSWERS -----
+
+
+// function alternatingSums(a) {
+//     var team1 = 0;
+//     var team2 = 0;
+    
+//     for (var i = 0; i < a.length; i++) {
+//         if (i % 2 == 0) {
+//             team1 += a[i];
+//         } else {
+//             team2 += a[i];
+//         }
+//     }
+    
+//     return [team1, team2];
+// }
+
 
 
 // Test 1
 // Input:
-// a: [50, 60, 60, 45, 70]
+alternatingSums([50, 60, 60, 45, 70]);
 // Expected Output:
 // [180, 105]
 
 // Test 2
 // Input:
-// a: [100, 50]
+alternatingSums([100, 50]);
 // Expected Output:
 // [100, 50]
 
 // Test 3
 // Input:
-// a: [80]
+alternatingSums([80]);
 // Expected Output:
 // [80, 0]
