@@ -1,6 +1,26 @@
 // Given a rectangular matrix of characters, add a border of asterisks(*) to it.
 
+// PSEUDO
+// push * on the front of each array
+// push * on the end of each array
+// get the new length
+// create a new element of *
+// multiply by the length of the first element
+
+// split('').string().
+
 function addBorder(picture) {
+
+    for (let i = 0; i < picture.length; i++) {
+        // console.log(picture);
+        // console.log(will give length)
+        // const element = picture[i].split('').push('*');
+        const element = picture[i].split('').join();
+        // const firstStar = element.push('*');
+        // console.log(firstStar);
+        console.log(element);
+        
+    }
 
 }
 
@@ -9,8 +29,8 @@ function addBorder(picture) {
 
 // For
 
-// picture = ["abc",
-//            "ded"]
+addBorder(["abc",
+           "ded"]);
 // the output should be
 
 // addBorder(picture) = ["*****",
