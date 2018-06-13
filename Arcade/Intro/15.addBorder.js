@@ -11,26 +11,58 @@
 
 function addBorder(picture) {
 
-    for (let i = 0; i < picture.length; i++) {
-        // console.log(picture);
-        // console.log(will give length)
-        // const element = picture[i].split('').push('*');
-        const element = picture[i].split('').join();
-        // const firstStar = element.push('*');
-        // console.log(firstStar);
-        console.log(element);
-        
+    let arr = []
+    let finalArr = []
+
+    if(picture.length === 1) {
+
+    } else {
+
+        for (let i = 0; i < picture.length; i++) {
+            // console.log(picture);
+            // console.log(will give length)
+            // const element = picture[i].split('').push('*');
+            const element = picture[i].split('');
+            element.push('*');
+            element.unshift('*');
+            // console.log(element);
+            // arr.push('*');
+            // console.log(firstStar);
+            // console.log(element);
+            arr.push(element);
+        }
+
+        // make into new strings
+        for(let j = 0; j < arr.length; j++){
+            const strings = arr[j].join('');
+            finalArr.push(strings);
+            // console.log(strings);
+        }
+        // adding stars
+        // console.log(arr[1].length);
+        const stars = ('*').repeat(arr[1].length);
+        // console.log(stars);
+        finalArr.push(stars);
+        finalArr.unshift(stars);
+
+        console.log(finalArr);
+        return finalArr;
+
+        // console.log(arr);
     }
+
+
 
 }
 
+// console.log('*');
 
 // Example
 
 // For
 
-addBorder(["abc",
-           "ded"]);
+// addBorder(["abc",
+//            "ded"]);
 // the output should be
 
 // addBorder(picture) = ["*****",
@@ -42,8 +74,8 @@ addBorder(["abc",
 
 // Test 1
 // Input:
-// picture: ["abc", 
-//  "ded"]
+addBorder(["abc", 
+ "ded"]);
 // Expected Output:
 // ["*****", 
 //  "*abc*", 
@@ -53,7 +85,7 @@ addBorder(["abc",
 
 // Test 2
 // Input:
-// picture: ["a"]
+addBorder(["a"]);
 // Expected Output:
 // ["***", 
 //  "*a*", 
@@ -62,11 +94,11 @@ addBorder(["abc",
 
 // Test 4
 // Input:
-// picture: ["abcde", 
-//  "fghij", 
-//  "klmno", 
-//  "pqrst", 
-//  "uvwxy"]
+addBorder(["abcde",
+ "fghij",
+ "klmno",
+ "pqrst",
+ "uvwxy"]); 
 // Expected Output:
 // ["*******", 
 //  "*abcde*", 
@@ -79,7 +111,7 @@ addBorder(["abc",
 
 // Test 5
 // Input:
-// picture: ["wzy**"]
+addBorder(["wzy**"]);
 // Expected Output:
 // ["*******", 
 //  "*wzy***", 
