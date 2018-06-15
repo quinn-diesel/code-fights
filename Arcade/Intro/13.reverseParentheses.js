@@ -9,8 +9,25 @@
 // reverseParentheses(s) = "acbde".
 
 function reverseParentheses(s) {
-
+    if (s.includes('(')){
+        // console.log(reverseParentheses(reverseOnce(s)))
+        return reverseParentheses(reverseOnce(s));
+    } else {     
+        // console.log(s);
+        return s;
+    }
 }
+
+function reverseOnce(s){
+    var regexp = /\(([^()]*)\)/i;
+    // console.log(regexp)
+    var subStr = regexp.exec(s)[1];
+    console.log(subStr)
+    subStr = subStr.split('').reverse().join('');
+    console.log(s.replace(regexp, subStr));
+    return s.replace(regexp, subStr);
+}
+
 
 
 
@@ -19,6 +36,7 @@ function reverseParentheses(s) {
 // Test 1
 // Input:
 // s: "a(bc)de"
+reverseParentheses("a(bc)de")
 // Expected Output:
 // "acbde"
 

@@ -77,7 +77,8 @@ function sortByHeight(a) {
 
 // Test 1
 // Input:
-console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
+console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 16
+    0, 180]));
 // Expected Output:
 // [-1, 150, 160, 170, -1, -1, 180, 190]
 

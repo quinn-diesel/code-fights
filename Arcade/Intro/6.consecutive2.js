@@ -1,7 +1,3 @@
-
-
-// Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues to be able to accomplish that. Help him figure out the minimum number of additional statues needed.
-
 // Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues to be able to accomplish that. Help him figure out the minimum number of additional statues needed.
 
 // Example
@@ -21,7 +17,6 @@
 
 // what I missed - getting the min and max for the array
 
-
 function makeArrayConsecutive2 (statues){
 
     // sor the array coming in 
@@ -35,14 +30,15 @@ function makeArrayConsecutive2 (statues){
     var min = statues[0];
      console.log('min =' + min)
 
-    var max = statues[statues.length -1];
+    var max = statues[statues.length - 1];
+
+    console.log(statues);
 
     console.log('max = ' + max)
 
     var count = 0;
 
-    
-    
+
     // loop through the results add the count
     for ( var i = min; i < max; i++){
         if(statues.indexOf(i) === -1){
