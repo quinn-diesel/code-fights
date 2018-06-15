@@ -15,6 +15,11 @@ function addBorder(picture) {
     let finalArr = []
 
     if(picture.length === 1) {
+        picture.push('*');
+        picture.unshift('*');
+        // picture.split('*');
+        // picture.join(" ");
+        console.log(picture);
 
     } else {
 
@@ -74,8 +79,8 @@ function addBorder(picture) {
 
 // Test 1
 // Input:
-addBorder(["abc", 
- "ded"]);
+// addBorder(["abc", 
+//  "ded"]);
 // Expected Output:
 // ["*****", 
 //  "*abc*", 
@@ -94,11 +99,11 @@ addBorder(["a"]);
 
 // Test 4
 // Input:
-addBorder(["abcde",
- "fghij",
- "klmno",
- "pqrst",
- "uvwxy"]); 
+// addBorder(["abcde",
+//  "fghij",
+//  "klmno",
+//  "pqrst",
+//  "uvwxy"]); 
 // Expected Output:
 // ["*******", 
 //  "*abcde*", 
