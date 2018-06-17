@@ -14,16 +14,7 @@ function addBorder(picture) {
     let arr = []
     let finalArr = []
 
-    if(picture.length === 1) {
-        picture.push('*');
-        picture.unshift('*');
-        // picture.split('*');
-        // picture.join(" ");
-        console.log(picture);
-
-    } else {
-
-        for (let i = 0; i < picture.length; i++) {
+    for (let i = 0; i < picture.length; i++) {
             // console.log(picture);
             // console.log(will give length)
             // const element = picture[i].split('').push('*');
@@ -33,19 +24,19 @@ function addBorder(picture) {
             // console.log(element);
             // arr.push('*');
             // console.log(firstStar);
-            // console.log(element);
+            console.log(element);
             arr.push(element);
         }
 
         // make into new strings
-        for(let j = 0; j < arr.length; j++){
+    for(let j = 0; j < arr.length; j++){
             const strings = arr[j].join('');
             finalArr.push(strings);
             // console.log(strings);
         }
         // adding stars
         // console.log(arr[1].length);
-        const stars = ('*').repeat(arr[1].length);
+        const stars = ('*').repeat(arr[0].length);
         // console.log(stars);
         finalArr.push(stars);
         finalArr.unshift(stars);
@@ -53,12 +44,27 @@ function addBorder(picture) {
         console.log(finalArr);
         return finalArr;
 
-        // console.log(arr);
-    }
-
-
+        console.log(arr)
 
 }
+
+// ----- RESEARCHED ANSWER ------
+// function addBorder(picture) {
+//     var answer = [""];
+//     for (var i = 0; i < picture[0].length + 2; i++) {
+//       answer[0] += "*";
+//     }
+//     for (var i = 0; i < picture.length; i++) {
+//       answer.push("*");
+//       for (var j = 0; j < picture[0].length; j++) {
+//         answer[i + 1] += picture[i][j];
+//       }
+//       answer[i + 1] += "*";
+//     }
+//     answer.push(answer[0]);
+//     console.log(answer);
+//     return answer;
+//   }
 
 // console.log('*');
 
@@ -66,8 +72,8 @@ function addBorder(picture) {
 
 // For
 
-// addBorder(["abc",
-//            "ded"]);
+addBorder(["abc",
+           "ded"]);
 // the output should be
 
 // addBorder(picture) = ["*****",
@@ -79,8 +85,8 @@ function addBorder(picture) {
 
 // Test 1
 // Input:
-// addBorder(["abc", 
-//  "ded"]);
+addBorder(["abc", 
+ "ded"]);
 // Expected Output:
 // ["*****", 
 //  "*abc*", 

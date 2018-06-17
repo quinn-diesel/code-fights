@@ -19,7 +19,7 @@
 
 // Any swap of any two elements either in a or in b won't make a and b equal.
 
-
+// console.log('linked');
 
 function areSimilar(a, b) {
 
