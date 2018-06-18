@@ -21,6 +21,13 @@
 
 // console.log('linked');
 
+// want to loop through the first array
+// check to see if the value is in b
+// if it is, need to return where it is in the array
+// pop off that value
+// at the end if there is nothing left with b then return true,
+// else return false
+
 function areSimilar(a, b) {
 
 }
