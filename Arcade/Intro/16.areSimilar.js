@@ -30,19 +30,31 @@
 
 function areSimilar(a, b) {
 
-    if (a === b) {
-		for (var i = 0; i < a.length; i++) {
-            if (areSimilar(a[i], b[i]) === false) {
-            console.log('false')
-            return false;}
-		}
-	} else {
-		for (var key in a) {
-			if (a.hasOwnProperty(key)) {
-				if (areSimilar(a[key], a[key]) === false) return false;
-			}
-		}
-	}
+    for (let i = 0; i < b.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            const aLoop = a[j];
+            if( aLoop === b[i]){
+                console.log(aLoop === b[i]);
+                let idx = b.indexOf(aLoop);
+                console.log(idx)
+                if(idx > -1){
+                    let filtered = b.splice(idx);
+                    console.log(filtered); 
+                }
+            }
+        }
+        // const first = a[i];
+        // const element = b[i];
+        // if( first === b[i]){
+        //     // console.log(first === b[i])
+        //     let idx = b.indexOf(first);
+        //     console.log(idx)
+        //     if(idx > -1){
+        //         let filtered = b.splice(idx);
+        //         console.log(filtered); 
+        //     }
+        // }
+    }
 
 }
 
@@ -120,6 +132,7 @@ function areSimilar(a, b) {
 
 // Test 2
 // Input:
+// console.log(areSimilar([1, 2, 3], [2, 1, 3]));
 areSimilar([1, 2, 3], [2, 1, 3])
 // Expected Output:
 // true
